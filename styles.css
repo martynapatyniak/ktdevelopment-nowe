@@ -1,139 +1,428 @@
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #fff;
-  color: #333;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .header {
-  border-bottom: 1px solid #eee;
-  padding: 1rem;
+    background: white;
+    padding: 10px 40px; /* Adjusted padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
 }
-.container {
-  display: flex;
-  align-items: center;
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between logo and text */
+}
+.header-right {
+    /* No changes needed here, flexbox will align it to the right */
 }
 .logo {
-  height: 48px;
-  margin-right: 1rem;
+    width: 45px; /* Slightly smaller */
+    height: 45px;
+    display: flex; /* To center SVG if it's smaller */
+    align-items: center;
+    justify-content: center;
+}
+.logo svg {
+    width: 100%;
+    height: 100%;
+}
+.company-name {
+    font-size: 1.2rem; /* Adjusted size */
+    font-weight: 700; /* Bolder */
+    color: #333;
+    margin: 0;
+    letter-spacing: 0.5px;
 }
 .nav {
-  margin-top: 0.5rem;
+    display: flex;
+    gap: 20px; /* More space between nav items */
+    margin-top: 5px; /* Space below company name */
 }
 .nav a {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: #DF1995;
+    text-decoration: none;
+    color: #DF1995;
+    font-weight: 500; /* Semi-bold */
+    font-size: 0.85rem; /* Slightly smaller */
+    transition: color 0.2s ease-in-out;
 }
+.nav a:hover {
+    color: #c41480; /* Darker on hover */
+}
+.kacper-logo {
+    width: 150px; /* Adjusted size for the header logo */
+    height: 150px;
+    position: relative;
+    transform: scale(0.6); /* Scale down the circular logo for the header */
+    transform-origin: top right; /* Scale from top right corner */
+    margin-right: -30px; /* Adjust margin to pull it slightly to the right */
+    margin-top: -30px; /* Adjust margin to pull it slightly up */
+}
+.kacper-logo .circular-logo-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Hide the text inside the header circular logo, as it's implied by the image that it's just the circle with lines */
+.kacper-logo .name, .kacper-logo .development, .kacper-logo .subtitle, .kacper-logo .logo-icon {
+    display: none;
+}
+
 .hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: #f9f9f9;
+    background: white;
+    padding: 60px 40px; /* Adjusted padding */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-top: 1px; /* To prevent margin collapse with header shadow */
 }
-.hero-logo {
-  height: 120px;
-  margin-bottom: 1rem;
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px; /* More space below this section */
+}
+.hero-left {
+    flex: 1;
+    text-align: left;
+    padding-left: 50px; /* Add some padding to align AI|IA */
+}
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    align-items: center;
+    padding-right: 50px; /* Add some padding */
+}
+.ai-text {
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans for this text */
+    font-size: 7rem; /* Larger font size */
+    font-weight: 700; /* Bolder */
+    margin: 0;
+    letter-spacing: -5px; /* Tighter letter spacing */
+    line-height: 1;
+}
+.ai-text .ai {
+    color: #DF1995;
+}
+.ai-text .ia {
+    color: #333;
+}
+.ai-text .separator {
+    color: #DF1995;
+    margin: 0 1.5rem; /* Larger separator space */
+}
+.circular-logo {
+    width: 320px; /* Adjusted size */
+    height: 320px;
+    border: 3px solid #DF1995;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: white; /* Ensure background is white */
+}
+.circular-logo .logo-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px; /* Space between icon and text */
+}
+.circular-logo .logo-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: #DF1995; /* Ensure icon color is correct */
+    fill: none;
+    stroke-width: 2.5px;
+}
+.circular-logo .name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem; /* Adjusted size */
+    font-weight: 700; /* Bolder */
+    color: #DF1995;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    text-transform: uppercase; /* Uppercase as in image */
+}
+.circular-logo .development {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem; /* Adjusted size */
+    font-weight: 700; /* Bolder */
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    margin-top: 5px; /* Space between name and development */
+    text-transform: uppercase; /* Uppercase as in image */
+}
+.circular-logo .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem; /* Adjusted size */
+    color: #666;
+    margin-top: 10px; /* Space above subtitle */
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Uppercase as in image */
+}
+.hero-tagline {
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans for this text */
+    font-size: 2.2rem; /* Adjusted size */
+    font-weight: 700; /* Bolder */
+    color: #333;
+    margin: 0 0 1rem 0; /* Adjusted margin */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero-description {
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans for this text */
+    font-size: 0.95rem; /* Adjusted size */
+    color: #666;
+    max-width: 700px; /* Max width for description */
+    margin: 0 auto 30px auto; /* More space below description */
+    line-height: 1.8;
 }
 .cta-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #DF1995;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
+    display: inline-block;
+    padding: 12px 30px; /* Larger padding */
+    background: #DF1995;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px; /* Slightly more rounded */
+    font-weight: 600; /* Semi-bold */
+    font-size: 1rem;
+    transition: background 0.2s ease-in-out;
+}
+.cta-button:hover {
+    background: #c41480;
 }
 section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+    padding: 40px; /* More padding */
+    max-width: 800px;
+    margin: 20px auto; /* More margin around sections */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 h3 {
-  color: #DF1995;
+    color: #DF1995;
+    font-size: 1.5rem; /* Larger heading */
+    margin-bottom: 20px; /* More space below heading */
+    font-weight: 700; /* Bolder */
+    font-family: 'Open Sans', sans-serif;
+}
+section p {
+    margin-bottom: 15px; /* More space between paragraphs */
+    color: #555;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+}
+section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px; /* Space above list */
+}
+section ul li {
+    margin-bottom: 12px; /* More space between list items */
+    padding-left: 25px; /* Space for bullet */
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+}
+section ul li:before {
+    content: "•";
+    color: #DF1995;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem; /* Larger bullet */
+    line-height: 1; /* Align bullet vertically */
+}
+section ul li strong {
+    color: #333;
+    font-weight: 600; /* Semi-bold for strong text */
 }
 footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.875rem;
-  color: #888;
+    text-align: center;
+    padding: 30px; /* More padding */
+    font-size: 0.85rem;
+    color: #888;
+    background: white;
+    margin-top: 40px; /* More margin above footer */
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
 }
-.hero {
-  background: #f9f9f9;
-  padding: 2rem 1rem;
-  text-align: center;
+.contact-email {
+    color: #DF1995;
+    text-decoration: none;
+    font-weight: 500;
 }
-
-.hero-logos {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 3rem;
-  flex-wrap: nowrap;
-  padding-top: 0.5rem;
-  padding-bottom: 1.5rem;
-  margin: 0 auto;
-  max-width: 1200px;
+.contact-email:hover {
+    text-decoration: underline;
 }
 
-.ai-logo img {
-  height: 100px;
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    .hero-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .hero-left {
+        text-align: center;
+        padding-left: 0;
+    }
+    .hero-right {
+        justify-content: center;
+        padding-right: 0;
+    }
+    .ai-text {
+        font-size: 5rem;
+        letter-spacing: -3px;
+    }
+    .circular-logo {
+        width: 280px;
+        height: 280px;
+    }
+    .header-right {
+        display: none; /* Hide the large circular logo in header on smaller screens */
+    }
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    .nav {
+        margin-top: 10px;
+        flex-wrap: wrap; /* Allow nav items to wrap */
+        justify-content: center;
+    }
+    .company-name {
+        font-size: 1.1rem;
+    }
 }
 
-.kt-logo {
-  position: center;
-  left: 80px;
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 15px;
+    }
+    .nav {
+        gap: 15px;
+    }
+    .hero {
+        padding: 40px 20px;
+    }
+    .ai-text {
+        font-size: 3.5rem;
+        letter-spacing: -2px;
+    }
+    .ai-text .separator {
+        margin: 0 0.8rem;
+    }
+    .circular-logo {
+        width: 220px;
+        height: 220px;
+    }
+    .circular-logo .name, .circular-logo .development {
+        font-size: 1rem;
+    }
+    .circular-logo .subtitle {
+        font-size: 0.7rem;
+    }
+    .hero-tagline {
+        font-size: 1.8rem;
+    }
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    section {
+        padding: 30px 20px;
+        margin: 15px auto;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    section p, section ul li {
+        font-size: 0.9rem;
+    }
+    footer {
+        padding: 20px;
+        font-size: 0.8rem;
+    }
 }
 
-.kt-logo img {
-  width: 600px;
-  max-width: 95vw;
-  height: auto;
-  display: block;
-}
-
-.kt-text .kt-name {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #DF1995;
-  margin-top: 0.5rem;
-  letter-spacing: 1px;
-}
-
-.kt-text .kt-subtitle {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: black;
-}
-
-.kt-text .kt-desc {
-  font-size: 0.875rem;
-  color: #888;
-}
-
-..hero-description {
-  background-color: #eee;
-  padding: 2rem;
-  max-width: 700px;
-  margin: 2rem auto;
-  border-radius: 8px;
-  z-index: 1;
-  position: relative;
-  text-align: center;
-}
-
-.hero-description h2 {
-  margin-top: 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.cta-button {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #DF1995;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
+@media (max-width: 480px) {
+    .header-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+    .nav {
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .company-name {
+        font-size: 1rem;
+    }
+    .hero-content {
+        margin-bottom: 30px;
+    }
+    .ai-text {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+    }
+    .circular-logo {
+        width: 180px;
+        height: 180px;
+    }
+    .circular-logo .logo-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    .circular-logo .name, .circular-logo .development {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+    .circular-logo .subtitle {
+        font-size: 0.65rem;
+        margin-top: 5px;
+    }
+    .hero-tagline {
+        font-size: 1.5rem;
+    }
+    .hero-description {
+        font-size: 0.85rem;
+    }
+    .cta-button {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+    section {
+        padding: 20px 15px;
+        margin: 10px auto;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
 }
