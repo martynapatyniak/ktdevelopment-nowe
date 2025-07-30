@@ -66,10 +66,14 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 4rem;
+  flex-wrap: nowrap;
+  padding-top: 0;
+  padding-bottom: 2rem;
+  margin-top: 0;
+  text-align: center;
 }
+
 
 .ai-logo img {
   height: 80px;
