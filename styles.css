@@ -80,7 +80,10 @@ footer {
 }
 
 .kt-logo img {
-  height: 120px;
+  width: 600px;
+  max-width: 95vw;
+  height: auto;
+  display: block;
 }
 
 .kt-text .kt-name {
