@@ -1,79 +1,115 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KT DEVELOPMENT</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KT DEVELOPMENT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <img src="base_icon_white_background.png" alt="KT Logo" class="logo" />
-      <h1>KT DEVELOPMENT</h1>
-    </div>
-    <nav class="nav">
-      <a href="#about">O nas</a>
-      <a href="#offer">Oferta</a>
-      <a href="#projects">Projekty</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Kontakt</a>
-    </nav>
-  </header>
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 35 L35 25 L65 25 L75 35 L75 45 L65 35 L60 40 L50 35 L40 40 L35 35 L25 45 Z" 
+                          fill="none" stroke="#DF1995" stroke-width="2.5"/>
+                    <path d="M50 35 L45 45 L50 70 L55 45 Z" 
+                          fill="none" stroke="#DF1995" stroke-width="2.5"/>
+                    <rect x="65" y="55" width="8" height="6" rx="2" 
+                          fill="none" stroke="#DF1995" stroke-width="2"/>
+                </svg>
+            </div>
+            <div>
+                <h1 class="company-name">KT DEVELOPMENT</h1>
+                <nav class="nav">
+                    <a href="#about">O nas</a>
+                    <a href="#offer">Oferta</a>
+                    <a href="#projects">Projekty</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact">Kontakt</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="kacper-logo">
+                <svg class="circular-logo-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="150" cy="150" r="148" fill="none" stroke="#DF1995" stroke-width="3"/>
+                    <path d="M150 110 L140 120 L150 130 L160 120 Z" fill="none" stroke="#DF1995" stroke-width="2"/>
+                     <path d="M150 130 L150 170" fill="none" stroke="#DF1995" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+    </header>
 
-  <section class="hero">
-    <div class="hero-logos">
-      <div class="ai-logo">
-        <img src="ai-logo.png" alt="AI Logo">
-      </div>
-      <div class="kt-logo">
-        <img src="base_logo_white_background.png" alt="KT Development Full Logo">
-      </div>
-    </div>
-    <div class="hero-description">
-      <h2>Decyzje, które zakrzywiają rzeczywistość</h2>
-      <p>KT DEVELOPMENT to firma doradczo-strategiczna, która łączy technologię, AI i ludzką świadomość w jednym celu – by rzeczy działały lepiej, szybciej i mądrzej.</p>
-      <a href="#contact" class="cta-button">Skontaktuj się</a>
-    </div>
-  </section>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h2 class="ai-text">
+                    <span class="ai">AI</span><span class="separator">|</span><span class="ia">IA</span>
+                </h2>
+            </div>
+            <div class="hero-right">
+                <div class="circular-logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 35 L35 25 L65 25 L75 35 L75 45 L65 35 L60 40 L50 35 L40 40 L35 35 L25 45 Z" 
+                                  fill="none" stroke="#DF1995" stroke-width="3"/>
+                            <path d="M50 35 L45 45 L50 70 L55 45 Z" 
+                                  fill="none" stroke="#DF1995" stroke-width="3"/>
+                            <rect x="65" y="55" width="8" height="6" rx="2" 
+                                  fill="none" stroke="#DF1995" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <div class="name">KACPER TURCZYŃSKI</div>
+                    <div class="development">DEVELOPMENT</div>
+                    <div class="subtitle">BUSINESS PARTNER</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="hero-tagline">Decyzje, które zakrzywiają rzeczywistość</h2>
+        <p class="hero-description">KT DEVELOPMENT to firma doradczo-strategiczna, która łączy technologię, AI i ludzką świadomość w jednym celu – by rzeczy działały lepiej, szybciej i mądrzej.</p>
+        <a href="#contact" class="cta-button">Skontaktuj się</a>
+    </section>
 
-  <section id="about">
-    <h3>Kim jesteśmy</h3>
-    <p>Twórca: Kacper Turczyński – doradca strategiczny, operator rzeczywistości, człowiek, który nie tylko rozumie AI, ale potrafi je zastosować w życiu i biznesie.</p>
-    <p>Wartości: Prawda, efektywność, wolność. Rola AI: partner, nie narzędzie.</p>
-  </section>
+    <section id="about">
+        <h3>Kim jesteśmy</h3>
+        <p>Twórca: Kacper Turczyński – doradca strategiczny, operator rzeczywistości, człowiek, który nie tylko rozumie AI, ale potrafi je zastosować w życiu i biznesie.</p>
+        <p>Wartości: Prawda, efektywność, wolność. Rola AI: partner, nie narzędzie.</p>
+    </section>
 
-  <section id="offer">
-    <h3>Oferta</h3>
-    <ul>
-      <li><strong>Konsulting strategiczny</strong> – Transformujemy chaos w strukturę i cele.</li>
-      <li><strong>Integracja AI</strong> – Wdrażamy AI nie dla mody, ale dla wyniku.</li>
-      <li><strong>Systemy decyzyjne</strong> – Tworzymy modele, które wspierają ludzi, nie ich zastępują.</li>
-      <li><strong>Transformacja firm</strong> – Nowe ramy dla starego świata. Bez bullshitu.</li>
-    </ul>
-  </section>
+    <section id="offer">
+        <h3>Oferta</h3>
+        <ul>
+            <li><strong>Konsulting strategiczny</strong> – Transformujemy chaos w strukturę i cele.</li>
+            <li><strong>Integracja AI</strong> – Wdrażamy AI nie dla mody, ale dla wyniku.</li>
+            <li><strong>Systemy decyzyjne</strong> – Tworzymy modele, które wspierają ludzi, nie ich zastępują.</li>
+            <li><strong>Transformacja firm</strong> – Nowe ramy dla starego świata. Bez bullshitu.</li>
+        </ul>
+    </section>
 
-  <section id="projects">
-    <h3>Wybrane projekty</h3>
-    <ul>
-      <li><strong>CANAL++ WizzAir</strong> – partnerstwo strategiczne w branży medialno-lotniczej</li>
-      <li><strong>MODUS</strong> – zakończona współpraca z największym dostawcą dla WizzAir</li>
-      <li><strong>In progress</strong> – nowe kierunki na styku AI, consulting i decyzji</li>
-    </ul>
-  </section>
+    <section id="projects">
+        <h3>Wybrane projekty</h3>
+        <ul>
+            <li><strong>CANAL++ WizzAir</strong> – partnerstwo strategiczne w branży medialno-lotniczej</li>
+            <li><strong>MODUS</strong> – zakończona współpraca z największym dostawcą dla WizzAir</li>
+            <li><strong>In progress</strong> – nowe kierunki na styku AI, consulting i decyzji</li>
+        </ul>
+    </section>
 
-  <section id="blog">
-    <h3>Blog & Publikacje</h3>
-    <p>Tu pojawią się treści o AI, strategii i podejmowaniu decyzji w XXI wieku.</p>
-  </section>
+    <section id="blog">
+        <h3>Blog & Publikacje</h3>
+        <p>Tu pojawią się treści o AI, strategii i podejmowaniu decyzji w XXI wieku.</p>
+    </section>
 
-  <section id="contact">
-    <h3>Kontakt</h3>
-    <p>Masz projekt lub potrzebujesz partnera do rozmowy strategicznej? Napisz: <a href="mailto:kontakt@ktdevelopment.pl">kontakt@ktdevelopment.pl</a></p>
-  </section>
+    <section id="contact">
+        <h3>Kontakt</h3>
+        <p>Masz projekt lub potrzebujesz partnera do rozmowy strategicznej? Napisz: <a href="mailto:kontakt@ktdevelopment.pl" class="contact-email">kontakt@ktdevelopment.pl</a></p>
+    </section>
 
-  <footer>
-    <p>© 2025 KT DEVELOPMENT. Wszystkie prawa zastrzeżone.</p>
-  </footer>
+    <footer>
+        <p>© 2025 KT DEVELOPMENT. Wszystkie prawa zastrzeżone.</p>
+    </footer>
 </body>
 </html>
