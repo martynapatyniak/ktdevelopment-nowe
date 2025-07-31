@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "blog"
@@ -14,18 +14,6 @@ collections:
     fields:
       - { label: "Tytuł", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Obrazek", name: "thumbnail", widget: "image", required: false }
-      - { label: "Treść", name: "body", widget: "markdown" }
-
-  - name: "oferta"
-    label: "Oferta"
-    folder: "content/oferta"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Tytuł", name: "title", widget: "string" }
-      - { label: "Opis", name: "description", widget: "text" }
-      - { label: "Obrazek", name: "image", widget: "image", required: false }
       - { label: "Treść", name: "body", widget: "markdown" }
 
   - name: "projekty"
@@ -34,8 +22,14 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Nazwa projektu", name: "title", widget: "string" }
-      - { label: "Klient", name: "client", widget: "string", required: false }
-      - { label: "Rok", name: "year", widget: "number", required: false }
-      - { label: "Obrazek", name: "thumbnail", widget: "image", required: false }
+      - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Opis", name: "body", widget: "markdown" }
+
+  - name: "oferta"
+    label: "Oferta"
+    folder: "content/oferta"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Tytuł", name: "title", widget: "string" }
       - { label: "Opis", name: "body", widget: "markdown" }
