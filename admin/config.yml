@@ -1,7 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: martynapatyniak/ktdevelopment-nowe
   branch: main
-
+  site_domain: spectacular-belekoy-dc97f2.netlify.app
+  use_graphql: true
 media_folder: "uploads"
 public_folder: "/uploads"
 
