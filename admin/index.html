@@ -2,10 +2,20 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Admin</title>
+    <title>Admin Panel</title>
   </head>
   <body>
-    <div id="nc-root"></div>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const root = document.createElement("div");
+        root.id = "nc-root";
+        document.body.appendChild(root);
+        window.CMS.init();
+      });
+    </script>
   </body>
 </html>
