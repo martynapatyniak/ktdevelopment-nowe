@@ -6,15 +6,16 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "projekty"
-    label: "Projekty"
-    folder: "content/projekty"
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Tytuł", name: "title", widget: "string" }
-      - { label: "Opis", name: "body", widget: "markdown" }
-      - { label: "Zdjęcie", name: "thumbnail", widget: "image" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Obrazek", name: "thumbnail", widget: "image", required: false }
+      - { label: "Treść", name: "body", widget: "markdown" }
 
   - name: "oferta"
     label: "Oferta"
@@ -23,15 +24,18 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Tytuł", name: "title", widget: "string" }
-      - { label: "Opis", name: "body", widget: "markdown" }
+      - { label: "Opis", name: "description", widget: "text" }
+      - { label: "Obrazek", name: "image", widget: "image", required: false }
+      - { label: "Treść", name: "body", widget: "markdown" }
 
-  - name: "strona-glowna"
-    label: "Strona główna"
-    files:
-      - label: "Sekcja powitalna"
-        name: "hero"
-        file: "content/strona-glowna/hero.md"
-        fields:
-          - { label: "Nagłówek", name: "title", widget: "string" }
-          - { label: "Opis", name: "body", widget: "markdown" }
-          - { label: "Tło", name: "background", widget: "image" }
+  - name: "projekty"
+    label: "Projekty"
+    folder: "content/projekty"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nazwa projektu", name: "title", widget: "string" }
+      - { label: "Klient", name: "client", widget: "string", required: false }
+      - { label: "Rok", name: "year", widget: "number", required: false }
+      - { label: "Obrazek", name: "thumbnail", widget: "image", required: false }
+      - { label: "Opis", name: "body", widget: "markdown" }
